@@ -1,0 +1,19 @@
+.valores{
+    display: none;
+}
+
+body{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image:url(../img/papeldeparedee.jpg);
+    background-size: cover;
+    color: rgb(19, 114, 114);
+}
+
+section{
+    padding: 10px;
+}
+
+form{
+    padding: 50px;
+}

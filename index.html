@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artes</title>
+    <link rel="stylesheet" href="css/STYLE.CSS">
+</head>
+<body>
+<section>
+    <h1>ARTES TRADICIONAIS E DIGITAIS</h1>
+</section>
+    
+<form name="artes" onsubmit="finalizar()">
+
+<label for="Nome">Nome</label>
+<input type="text" name="nome" id="nome" required>
+
+<label for="telefone">Telefone</label>
+<input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" required>
+
+<label for="email">E-mail</label>
+<input type="email" name="email" id="email" placeholder="nome@provedor.com" required>
+<P> 
+<label for="frete">Tipo de frete</label>
+<input type="radio" name="frete" id="normal" value="5"  onchange="calcFrete(this.value)">
+<label for="normal">Frete normal</label>
+
+<input type="radio" name="frete" id="expresso" value="12.50" onchange="calcFrete(this.value)">
+<label for="expresso">Frete expresso</label>
+
+
+</P>
+
+<p>
+    <label for="tipodesenho">Tipo de desenho</label>
+    <input type="radio" name="tipodesenho" id="manual" value="100" onchange="calcDesenho(this.value)">
+    <label for="manual">Manual</label>
+    <input type="radio" name="tipodesenho" id="digital" value="60" onchange="calcDesenho(this.value)">
+    <label for="digital">Digital</label>
+</p>
+
+<p>
+   <label for="tipoarte">Tipo de arte</label>
+   <input type="radio" name="tipoarte" id="cartoon" value="20" onchange="calcArte(this.value)">
+   <label for="cartoon">Arte cartoon</label>
+   <input type="radio" name="tipoarte" id="anime" value="30" onchange="calcArte(this.value)">
+   <label for="anime">Arte anime</label>
+   <input type="radio" name="tipoarte" id="semirealista" value="40" onchange="calcArte(this.value)">
+   <label for="semirealista">Arte semirealista</label>
+   <input type="radio" name="tipoarte" id="realista" value="50" onchange="calcArte(this.value)">
+   <label for="realista">Arte realista</label>
+</p>
+
+<p>
+    <label for="tipocorpo">Tipo de corpo</label>
+    <input type="radio" name="tipocotpo" id="cabeca" value="20" onchange="calcCorpo(this.value)">
+    <label for="cabeca">Cabeça</label>
+    <input type="radio" name="tipocorpo" id="ombro" value="25" onchange="calcCorpo(this.value)">
+    <label for="ombro">Até o ombro</label>
+    <input type="radio" name="tipocorpo" id="tronco" value="30" onchange="calcCorpo(this.value)">
+    <label for="tronco">Até o tronco</label>
+    <input type="radio" name="tipocorpo" id="cintura" value="35" onchange="calcCorpo(this.value)">
+    <label for="cintura">Até a cintura</label>
+    <input type="radio" name="tipocorpo" id="pernas" value="40" onchange="calcCorpo(this.value)">
+    <label for="pernas">Até as pernas</label>
+    <input type="radio" name="tipocorpo" id="tudo" value="50" onchange="calcCorpo(this.value)">
+    <label for="tudo">Corpo inteiro</label>
+
+
+</p>
+    <p class="valores">
+        Frete <output id="vfrete"> 0 </output>
+        Desenho <output id="vdesenho"> 0 </output>  
+        Arte <output id="varte"> 0 </output>     
+        Corpo <output id="vcorpo"> 0 </output>
+    </p>
+          
+            <p id="saida">
+            R$ <output id="total"> 0 </output>
+            </p>
+            <button type="reset">Limpar </button>
+            <button type="submit">Enviar </button>
+</form>
+        <script src="js/index.js"></script>
+</body>
+</html>
